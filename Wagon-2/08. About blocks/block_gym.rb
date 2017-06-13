@@ -1,13 +1,14 @@
 # Recoding inject iterator
-
 def inject(array, initial_value)
-  # your code goes here
+  array.each do |item|
+    initial_value = yield(initial_value, item)
+  end
+  initial_value
 end
 
 puts inject(1..100, 0) { |initial_value, element| element + initial_value } == 5050 # true
 
 # Block timer
-
 def timer_for
   # your code goes here
 end
