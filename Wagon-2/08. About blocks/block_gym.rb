@@ -17,7 +17,7 @@ def timer_for
 end
 
 timer_for do 
-  (1..100).each { |i| (1..100000).to_a.shuffle.sort }
+  (1..200).each { |i| (1..100000).to_a.shuffle.sort }
 end
 
 # Should return around 2-3 seconds
