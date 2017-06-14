@@ -10,7 +10,10 @@ puts inject(1..100, 0) { |initial_value, element| element + initial_value } == 5
 
 # Block timer
 def timer_for
-  # your code goes here
+  start_time = Time.now
+  yield
+  taken = Time.now - start_time
+  puts "Execution took #{taken} seconds."
 end
 
 timer_for do 
